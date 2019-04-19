@@ -1,0 +1,78 @@
+<div class="calculator loan-calculator" id="loan-calculator">
+    <form name="loan-calculator">
+        <div class="header">
+            <h2>Haluan laskea lainan</h2>
+            <div class="tab-wrap">
+                <input type="radio" name="tabs" id="tab1" checked="">
+                    <div class="tab-label-content">
+                        <label for="tab1" id="monthlyPaymentButton">Kk-erän</label>
+                    </div>
+                <input type="radio" name="tabs" id="tab2">
+                    <div class="tab-label-content">
+                        <label for="tab2" id="monthsToPayOffButton">ajan</label>
+                    </div>
+                <input type="radio" name="tabs" id="tab3">
+                    <div class="tab-label-content">
+                        <label for="tab3" id="maxAmountButton">määran</label>
+                    </div>
+                <div class="slide"></div>
+            </div>
+        </div>
+        <ul class="form">
+            <li>
+                <input type="tel" id="loanAmount" class="calcEntry dollar" name="loanAmount" value="10000">
+                <label for="loanAmount" class="active">Lainan määrä (€)</label>
+                <i class="euro icon"></i>
+                <div class="range-sliders loan-range">
+                    <input id="range-control" type="range" max="50000" min="0" value="10000" step="100" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"><div class="rangeslider rangeslider--horizontal" id="js-rangeslider-0"><div class="rangeslider__fill" style="width: 83.1px;"></div><div class="rangeslider__handle" style="left: 69.6px;"></div></div>
+                </div>
+            </li>
+            <li>
+                <label for="apr" class="active">Korko (%)</label>
+                <i class="percent icon"></i>
+                <input type="tel" id="apr" class="calcEntry percent" name="apr" value="5">
+                <div class="range-sliders apr-range">
+                    <input id="range-control1" type="range" min="0" max="100" step="1" value="2" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"><div class="rangeslider rangeslider--horizontal" id="js-rangeslider-1"><div class="rangeslider__fill" style="width: 20.46px;"></div><div class="rangeslider__handle" style="left: 6.96px;"></div></div>
+                </div>
+            </li>
+            <li class="calculator-blur" style="">
+                <label for="monthlyPayment" class="active">Lainan kuukausierä</label>
+                <i class="euro icon"></i>
+                <input type="tel" id="monthlyPayment" class="calcEntry dollar" name="monthlyPayment" value="500" disabled="">
+                <div class="range-sliders monthly-range disabled-slider" style="">
+                    <input id="range-control2" type="range" max="10000" value="500" step="100" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"><div class="rangeslider rangeslider--horizontal" id="js-rangeslider-2" style=""><div class="rangeslider__fill" style="width: 30.9px;"></div><div class="rangeslider__handle" style="left: 17.4px;"></div></div>
+                </div>
+            </li>
+            <li class="">
+                <label for="monthsToPayOff" class="active">Laina-aika (kk)</label>
+                <i class="calendar icon"></i>
+                <input type="tel" id="monthsToPayOff" class="calcEntry" name="monthsToPayOff" value="12">
+                <div class="range-sliders payoff-range">
+                    <input id="range-control3" type="range" min="0" max="240" step="1" value="0" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"><div class="rangeslider rangeslider--horizontal" id="js-rangeslider-3"><div class="rangeslider__fill" style="width: 13.5px;"></div><div class="rangeslider__handle" style="left: 0px;"></div></div>
+                </div>
+            </li>
+        </ul>
+    </form>
+    <table class="ui blue table">
+        <thead>
+            <tr>
+                <th colspan="2">Lainan tiedot</th>
+            </tr>
+        </thead>
+        <tbody id="calculator-results">
+            <tr>
+                <td>Kuukausierä</td>
+                <td>856.07 €/kk</td>
+            </tr>
+            <tr>
+                <td>Korkojen osuus</td>
+                <td>272.90 €</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="text-right">
+                <a href="lainahakemus" class="button-main button-main-2 button-main-sm button-main-full">Hae lainaa</a>
+              </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
